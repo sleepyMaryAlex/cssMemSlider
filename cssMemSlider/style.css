@@ -27,3 +27,95 @@ body {
     margin: 0 auto;
     min-height: 100vh;
 }
+
+.header {
+    background-color: var(--second-bg-color);
+    border-bottom-left-radius: 180%;
+    border-bottom-right-radius: 180%;
+    height: 9vh;
+}
+
+h1 {
+    text-align: center;    
+}
+
+h1 span {
+    font-size: 0.5em;
+    margin: 0 0.5em;
+    transition: all 0.5s;
+}
+
+h1 span:hover {
+    font-size: 0.6em;
+}
+
+.main {
+    height: 84vh;
+}
+
+.slider {
+    display: flex;
+    flex-direction: column;
+}
+
+.slider img {
+    margin-top: 10vh;
+    max-height: 56vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 13vh;
+    margin-top: 5vh;
+}
+
+.container p {
+    color: var(--text-color);
+    font-size: 0.8em;
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+}
+
+.control {
+    width: 0.7em;
+    height: 0.7em;
+    background-color: var(--text-color);
+    border: 0.3em solid var(--first-bg-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.control:hover {
+    background-color: var(--color-hover);
+}  
+
+.control:active {
+    background-color: var(--color-active);
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--second-bg-color);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 20%;
+    height: 7vh;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--main-color);
+    transition: border-bottom 0.5s;
+}
+
+.footer a:hover {
+    border-bottom: 0.1em dotted var(--text-color);
+}
