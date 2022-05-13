@@ -6,12 +6,12 @@
 }
 
 :root {
-    --first-bg-color: #F7F6AE;
-    --second-bg-color: #EFEE6F;
+    --first-bg-color: #f7f6aeda;
+    --second-bg-color: #efef6fd7;
     --main-color: #2E1C6B;
     --text-color: #9B9A24;
     --color-hover: #76751d;
-    --color-active: #555519;
+    --color-active: #43430f;
 }
 
 body {
@@ -19,27 +19,27 @@ body {
     font-size: 2rem;
     background-color: var(--first-bg-color);
     color: var(--main-color);
-    min-height: 100vh;
 }
 
 .wrapper {
-    max-width: 100vh;
+    width: 52rem;
     margin: 0 auto;
-    min-height: 100vh;
 }
 
 .header {
     background-color: var(--second-bg-color);
     border-bottom-left-radius: 180%;
     border-bottom-right-radius: 180%;
-    height: 9vh;
+    min-height: 10vh;
 }
 
 h1 {
-    text-align: center;    
+    text-align: center; 
+    font-size: 3.5rem;   
 }
 
 h1 span {
+    display: inline-block;
     font-size: 0.5em;
     margin: 0 0.5em;
     transition: all 0.5s;
@@ -47,55 +47,134 @@ h1 span {
 
 h1 span:hover {
     font-size: 0.6em;
+    transform: rotate(90deg);
 }
 
 .main {
-    height: 84vh;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .slider {
+    width: 52rem;
+    height: 29rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    background-color: var(--second-bg-color);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    overflow: hidden;
 }
 
-.slider img {
-    margin-top: 10vh;
-    max-height: 56vh;
+.slide {
+    transition: all 0.6s ease;
 }
+
+.slide img {
+    width: 48rem;
+    margin: 1.5rem 2rem;
+    border-radius: 1rem;
+}
+
+#radio1:checked ~ .slider .slide1 {
+    margin-left: 0rem;
+}
+
+#radio2:checked ~ .slider .slide1 {
+    margin-left: -52rem;
+}
+
+#radio3:checked ~ .slider .slide1 {
+    margin-left: -104rem;
+}
+
+#radio4:checked ~ .slider .slide1 {
+    margin-left: -156rem;
+}
+
+#radio1:checked ~ .container .navigation .bar1, 
+#radio2:checked ~ .container .navigation .bar2, 
+#radio3:checked ~ .container .navigation .bar3, 
+#radio4:checked ~ .container .navigation .bar4 {
+    background-color: var(--main-color);
+    opacity: 1;
+    transform: scale(1.1);
+} 
 
 .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 13vh;
-    margin-top: 5vh;
+    width: 47rem;
+    height: 5rem;
+    padding: 1rem 2.5rem 0 2.5rem;
+    margin-bottom: 2rem;
+    background-color: var(--second-bg-color);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    overflow: hidden;
 }
 
-.container p {
+.title {
+    opacity: 0;
     color: var(--text-color);
     font-size: 0.8em;
+    transition-property: margin-top, opacity;
+    transition-duration: 0.5s;
+    margin-bottom: 2.4rem;
+    user-select: none;
 }
 
-.controls {
+#radio1:checked ~ .container .title1 {
+    opacity: 1;
+}
+
+#radio2:checked ~ .container .title2 {
+    margin-top: -4.7rem;
+    opacity: 1;
+}
+
+#radio3:checked ~ .container .title3 {
+    margin-top: -9.4rem;
+    opacity: 1;
+}
+
+#radio4:checked ~ .container .title4 {
+    margin-top: -14rem;
+    opacity: 1;
+}
+
+input[name="radio"] {
+    visibility: hidden;
+    width: 0;
+}
+
+.navigation {
     display: flex;
-    flex-direction: row;
 }
 
-.control {
-    width: 0.7em;
-    height: 0.7em;
-    background-color: var(--text-color);
-    border: 0.3em solid var(--first-bg-color);
-    border-radius: 50%;
+.bar {
+    height: 0.7rem;
+    width: 2rem;
     cursor: pointer;
-    transition: background-color 0.5s;
+    margin: 0.3rem;
+    background-color: var(--text-color);
+    border-radius: 0.9rem;
+    background-clip: padding-box;
+    border: 0.4rem solid transparent;
+    transition: all 0.5s ease;
+    opacity: 0.5;
 }
 
-.control:hover {
+.bar:hover {
     background-color: var(--color-hover);
-}  
+    transform: scale(1.1);
+    opacity: 0.7;
+}
 
-.control:active {
+.bar:active {
     background-color: var(--color-active);
 }
 
@@ -107,7 +186,7 @@ h1 span:hover {
     background-color: var(--second-bg-color);
     border-top-left-radius: 50%;
     border-top-right-radius: 20%;
-    height: 7vh;
+    min-height: 10vh;
 }
 
 .footer a {

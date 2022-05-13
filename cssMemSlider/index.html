@@ -16,16 +16,28 @@
             <h1><span>🤣</span>MEM SLIDER<span>😎</span></h1>
         </header>
         <main class="main">
+            <input type="radio" name="radio" id="radio1" checked>
+            <input type="radio" name="radio" id="radio2">
+            <input type="radio" name="radio" id="radio3">
+            <input type="radio" name="radio" id="radio4">
             <div class="slider">
-                <img src="assets/javascript-everywhere.jpg" alt="image">
-                <div class="container">
-                    <p>JavaScript everywhere</p>
-                    <div class="controls">
-                        <div class="control"></div>
-                        <div class="control"></div>
-                        <div class="control"></div>
-                        <div class="control"></div>
-                    </div>
+                <div class="slide slide1"><img src="assets/javascript-everywhere.jpg" alt="image"></div>
+                <div class="slide"><img src="assets/internet-explorer.jpg" alt="image"></div>
+                <div class="slide"><img src="assets/still-worthy.jpg" alt="image"></div>
+                <div class="slide"><img src="assets/html-css-in-js.jpg" alt="image"></div>
+            </div>
+            <div class="container">
+                <div class="titles">
+                    <div class="title title1">JavaScript everywhere!</div>
+                    <div class="title title2">She forced me to use Internet Explorer...</div>
+                    <div class="title title3">Still worthy!</div>
+                    <div class="title title4">The HTML doesn't need to load JS and CSS...</div>
+                </div>
+                <div class="navigation">
+                    <label for="radio1" class="bar bar1"></label>
+                    <label for="radio2" class="bar bar2"></label>
+                    <label for="radio3" class="bar bar3"></label>
+                    <label for="radio4" class="bar bar4"></label>
                 </div>
             </div>
         </main>
