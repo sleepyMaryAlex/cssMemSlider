@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-tap-highlight-color: transparent;
 }
 
 :root {
@@ -99,7 +100,7 @@ h1 span {
 }
 
 #radio1:checked ~ .slider .slide1 {
-    margin-left: 0rem;
+    margin-left: 0vw;
 }
 
 #radio2:checked ~ .slider .slide1 {
@@ -143,7 +144,7 @@ h1 span {
     font-size: 0.8em;
     transition-property: margin-top, opacity, transform;
     transition-duration: 0.5s;
-    margin-bottom: 2.4rem;
+    margin-bottom: 3rem;
     animation: shake 0.7s;
     animation-iteration-count: infinite;
 }
@@ -172,7 +173,7 @@ h1 span {
 }
 
 #radio2:checked ~ .container .title1 {
-    margin-top: -4.7rem;
+    margin-top: -5.3rem;
     opacity: 0;
     transform: scale(0.5);
 }
@@ -182,7 +183,7 @@ h1 span {
 }
 
 #radio3:checked ~ .container .title1 {
-    margin-top: -9.4rem;
+    margin-top: -10.8rem;
     opacity: 0;
 }
 
@@ -196,7 +197,7 @@ h1 span {
 }
 
 #radio4:checked ~ .container .title1 {
-    margin-top: -14.3rem;
+    margin-top: -15.9rem;
     opacity: 0;
 }
 
@@ -266,58 +267,87 @@ input[name="radio"] {
     border-bottom: 0.1em dotted var(--text-color);
 }
 
-@media (max-width: 870px) {
-    body {
-        font-size: 1.5rem;
-    }
-
+@media (max-width: 1450px) {
     .wrapper {
-        width: 35rem;
-    }
-
-    h1 { 
-        font-size: 3rem;   
-    }
-
-    .img-container {
-        width: 32rem;
-        height: 18rem;
-        margin: 1.5rem 1.5rem;
+        width: 80vw;
     }
 
     .slider {
-        width: 35rem;
-        height: 20rem;
+        width: 80vw;
     }
-
+    
+    .img-container {
+        width: 75vw;
+        height: 42.2vw;
+    }
+    
     .slide img {
-        width: 32rem;
-        margin-right: 3rem;
-    }
-
-    #radio1:checked ~ .slider .slide1 {
-        margin-left: 0rem;
-    }
-    
-    #radio2:checked ~ .slider .slide1 {
-        margin-left: -35rem;
-    }
-    
-    #radio3:checked ~ .slider .slide1 {
-        margin-left: -70rem;
-    }
-    
-    #radio4:checked ~ .slider .slide1 {
-        margin-left: -105rem;
+        width: 75vw;
     }
 
     .container {
-        width: 32rem;
+        width: 75vw;
         height: 5rem;
-        padding: 1rem 1.5rem 0 1.5rem;
-        margin-bottom: 2rem;
+        padding: 2.5rem 2.5vw 0 2.5vw;
+        margin-bottom: 3.5rem;
+    }
+
+    #radio1:checked ~ .slider .slide1 {
+        margin-left: 0vw;
+    }
+    
+    #radio2:checked ~ .slider .slide1 {
+        margin-left: -79vw;
+    }
+    
+    #radio3:checked ~ .slider .slide1 {
+        margin-left: -158vw;
+    }
+    
+    #radio4:checked ~ .slider .slide1 {
+        margin-left: -237vw;
+    }
+}
+
+@media (max-width: 870px) {
+    .wrapper {
+        width: 96vw;
+    }
+
+    .slider {
+        width: 96vw;
+    }
+    
+    .img-container {
+        width: 91vw;
+        height: 51.2vw;
+    }
+    
+    .slide img {
+        width: 91vw;
+    }
+
+    .container {
+        width: 91vw;
+        height: 6rem;
         display: flex;
         flex-direction: column;
+    }
+
+    #radio1:checked ~ .slider .slide1 {
+        margin-left: 0vw;
+    }
+    
+    #radio2:checked ~ .slider .slide1 {
+        margin-left: -95vw;
+    }
+    
+    #radio3:checked ~ .slider .slide1 {
+        margin-left: -190vw;
+    }
+    
+    #radio4:checked ~ .slider .slide1 {
+        margin-left: -285vw;
     }
 
     .navigation {
@@ -325,67 +355,49 @@ input[name="radio"] {
         align-self: center;
     }
 
-    .bar {
-        margin: 0 0.2rem;
-    }
-
     .titles {
-        margin-top: 1rem;
+        margin-top: 0.3rem;
     }
 
-    .title {
-        opacity: 0;
-        color: var(--text-color);
-        font-size: 0.8em;
-        transition-property: margin-top, opacity, transform;
-        transition-duration: 0.5s;
-        margin-bottom: 2.4rem;
+    .footer {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 530px) {
+    body {
+        font-size: 1.5rem;
     }
 
-    #radio1:checked ~ .container .title1 {
-        opacity: 1;
-    }
-    
-    #radio1:checked ~ .container .title4 {
-        opacity: 0;
-        transform: scale(0.5);
+    h1 {
+        font-size: 1.5em;
     }
     
     #radio2:checked ~ .container .title1 {
-        margin-top: -4.2rem;
-        opacity: 0;
-        transform: scale(0.5);
-    }
-    
-    #radio2:checked ~ .container .title2 {
-        opacity: 1;
+        margin-top: -4.7rem;
     }
     
     #radio3:checked ~ .container .title1 {
-        margin-top: -8.4rem;
-        opacity: 0;
-    }
-    
-    #radio3:checked ~ .container .title2 {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-    
-    #radio3:checked ~ .container .title3 {
-        opacity: 1;
+        margin-top: -9.4rem;
     }
     
     #radio4:checked ~ .container .title1 {
-        margin-top: -12.6rem;
-        opacity: 0;
+        margin-top: -14.2rem;
+    }
+}
+
+@media (max-width: 362px) {
+    #radio2:checked ~ .container .title1 {
+        margin-top: -4.6rem;
     }
     
-    #radio4:checked ~ .container .title3 {
-        opacity: 0;
-        transform: scale(0.5);
+    #radio3:checked ~ .container .title1 {
+        margin-top: -11rem;
     }
     
-    #radio4:checked ~ .container .title4 {
-        opacity: 1;
+    #radio4:checked ~ .container .title1 {
+        margin-top: -16rem;
     }
 }
