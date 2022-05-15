@@ -22,7 +22,7 @@ body {
 }
 
 .wrapper {
-    width: 52rem;
+    width: 50vw;
     margin: 0 auto;
 }
 
@@ -35,7 +35,9 @@ body {
 
 h1 {
     text-align: center; 
-    font-size: 3.5rem;   
+    font-size: 3.5rem; 
+    animation: shake 1s;
+    animation-iteration-count: infinite;  
 }
 
 h1 span {
@@ -43,11 +45,22 @@ h1 span {
     font-size: 0.5em;
     margin: 0 0.5em;
     transition: all 0.5s;
+    animation-name: smile-animation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 }
 
-h1 span:hover {
-    font-size: 0.6em;
-    transform: rotate(90deg);
+@keyframes smile-animation {
+    0% {
+        font-size: 0.5em;
+        transform: rotate(0deg);
+    } 50% {
+        font-size: 0.6em;
+        transform: rotate(90deg);
+    } 90% {
+        font-size: 0.5em;
+        transform: rotate(0deg);
+    }
 }
 
 .main {
@@ -58,8 +71,7 @@ h1 span:hover {
 }
 
 .slider {
-    width: 52rem;
-    height: 29rem;
+    width: 50vw;
     background-color: var(--second-bg-color);
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
@@ -67,9 +79,9 @@ h1 span:hover {
 }
 
 .img-container {
-    width: 48rem;
-    height: 27rem;
-    margin: 1.5rem 2rem;
+    width: 45vw;
+    height: 25.3vw;
+    margin: 1.5rem 2.5vw 0 2.5vw;
     display: flex;
     flex-direction: row;
     overflow: hidden;
@@ -81,8 +93,8 @@ h1 span:hover {
 }
 
 .slide img {
-    width: 48rem;
-    margin-right: 4rem;
+    width: 45vw;
+    margin-right: 4vw;
     border-radius: 1rem;
 }
 
@@ -91,15 +103,15 @@ h1 span:hover {
 }
 
 #radio2:checked ~ .slider .slide1 {
-    margin-left: -52rem;
+    margin-left: -49vw;
 }
 
 #radio3:checked ~ .slider .slide1 {
-    margin-left: -104rem;
+    margin-left: -98vw;
 }
 
 #radio4:checked ~ .slider .slide1 {
-    margin-left: -156rem;
+    margin-left: -147vw;
 }
 
 #radio1:checked ~ .container .navigation .bar1, 
@@ -115,10 +127,10 @@ h1 span:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 48rem;
+    width: 45vw;
     height: 5rem;
-    padding: 1rem 2rem 0 2rem;
-    margin-bottom: 2rem;
+    padding: 2.5rem 2.5vw 0 2.5vw;
+    margin-bottom: 3.5rem;
     background-color: var(--second-bg-color);
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
@@ -132,6 +144,22 @@ h1 span:hover {
     transition-property: margin-top, opacity, transform;
     transition-duration: 0.5s;
     margin-bottom: 2.4rem;
+    animation: shake 0.7s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
 #radio1:checked ~ .container .title1 {
@@ -168,7 +196,7 @@ h1 span:hover {
 }
 
 #radio4:checked ~ .container .title1 {
-    margin-top: -14rem;
+    margin-top: -14.3rem;
     opacity: 0;
 }
 
