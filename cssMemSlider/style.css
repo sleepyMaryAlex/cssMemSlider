@@ -60,12 +60,20 @@ h1 span:hover {
 .slider {
     width: 52rem;
     height: 29rem;
-    display: flex;
-    flex-direction: row;
     background-color: var(--second-bg-color);
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     overflow: hidden;
+}
+
+.img-container {
+    width: 48rem;
+    height: 27rem;
+    margin: 1.5rem 2rem;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    border-radius: 1rem;
 }
 
 .slide {
@@ -74,7 +82,7 @@ h1 span:hover {
 
 .slide img {
     width: 48rem;
-    margin: 1.5rem 2rem;
+    margin-right: 4rem;
     border-radius: 1rem;
 }
 
@@ -107,9 +115,9 @@ h1 span:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 47rem;
+    width: 48rem;
     height: 5rem;
-    padding: 1rem 2.5rem 0 2.5rem;
+    padding: 1rem 2rem 0 2rem;
     margin-bottom: 2rem;
     background-color: var(--second-bg-color);
     border-bottom-left-radius: 1rem;
@@ -195,6 +203,10 @@ input[name="radio"] {
     opacity: 0.5;
 }
 
+.bar:last-child {
+    margin-right: 0;
+}
+
 .bar:hover {
     background-color: var(--color-hover);
     transform: scale(1.1);
@@ -239,6 +251,12 @@ input[name="radio"] {
         font-size: 3rem;   
     }
 
+    .img-container {
+        width: 32rem;
+        height: 18rem;
+        margin: 1.5rem 1.5rem;
+    }
+
     .slider {
         width: 35rem;
         height: 20rem;
@@ -246,7 +264,7 @@ input[name="radio"] {
 
     .slide img {
         width: 32rem;
-        margin: 1.5rem 1.5rem;
+        margin-right: 3rem;
     }
 
     #radio1:checked ~ .slider .slide1 {
@@ -266,9 +284,9 @@ input[name="radio"] {
     }
 
     .container {
-        width: 30rem;
+        width: 32rem;
         height: 5rem;
-        padding: 1rem 2.5rem 0 2.5rem;
+        padding: 1rem 1.5rem 0 1.5rem;
         margin-bottom: 2rem;
         display: flex;
         flex-direction: column;
