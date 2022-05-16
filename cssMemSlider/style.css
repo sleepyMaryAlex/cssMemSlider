@@ -256,8 +256,8 @@ input[name="radio"] {
 }
 
 .bar {
-    height: 0.7rem;
-    width: 2rem;
+    height: 0.5rem;
+    width: 2.5vw;
     cursor: pointer;
     margin: 0.3rem;
     background-color: var(--text-color);
